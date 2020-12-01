@@ -1,6 +1,6 @@
-# instaStore
+# InstaStore
 
-A new Flutter project.
+InstaStore is a mobile application defined as a self-sufficient system that enables customers to browse through list of product categories and stores. InstaStore is aimed towards the customer who wants to buy in an arranged way with usable interfaces, and the business owners who want to reach out to the maximum cross-section of customers. It is bridging the gap between the seller and the customer.
 
 ## Getting Started
 
