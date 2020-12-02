@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../config/palette.dart';
+import '../../Controllers/palette.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class SignUpBar extends StatelessWidget {

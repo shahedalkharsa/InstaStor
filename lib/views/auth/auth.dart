@@ -7,7 +7,7 @@ import '../home/home.dart';
 import './sign_in.dart';
 import './register.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import '../../config/palette.dart';
+import '../../Controllers/palette.dart';
 import '../../models/Customer.dart';
 import 'package:firebase_database/firebase_database.dart';
 
@@ -25,7 +25,7 @@ class AuthScreen extends StatefulWidget {
 
 class _AuthScreenState extends State<AuthScreen>
     with SingleTickerProviderStateMixin {
-  static List<Customer> customersList = [];
+  List<Customer> _customersList = [];
 
   AnimationController _controller;
 
@@ -46,19 +46,18 @@ class _AuthScreenState extends State<AuthScreen>
       var KEYS = snap.value.keys;
       var DATA = snap.value;
 
-      customersList.clear();
+      _customersList.clear();
       print(DATA);
       for (var key in KEYS) {
         Customer costumer = new Customer(
-            phone: DATA[key]['Phone'],
-            name: DATA[key]['Name'],
-            id: DATA[key]['Id']);
-        customersList.add(costumer);
-        print(DATA[key]['Name']);
+            phone: DATA[key]['Phone'], name: DATA[key]['Name'], id: key);
+        _customersList.add(costumer);
+        print(key);
+        print("lala");
       }
 
       setState(() {
-        print('Length: ${customersList.length}');
+        print('Length: ${_customersList.length}');
       });
     });
   }
@@ -90,17 +89,27 @@ class _AuthScreenState extends State<AuthScreen>
           ),
         ),
         onAuthSuccess: () {
-          final User user = _auth.currentUser;
+          final User user = FirebaseAuth.instance.currentUser;
+          String userId = user.uid;
+          //   Navigator.of(context)
+          //       .pushReplacementNamed(CompleteRegistration.routeName);
+          bool b = false;
+          for (Customer c in _customersList) {
+            print(c.id);
 
-          Navigator.of(context)
-              .pushReplacementNamed(CompleteRegistration.routeName);
-          for (Customer c in customersList) {
-            if (c.id != user.uid) {
-              Navigator.of(context)
-                  .pushReplacementNamed(CompleteRegistration.routeName);
+            print("yessss");
+            if (c.id != userId) {
+              b = false;
             } else {
-              Navigator.of(context).pushReplacement(HomeScreen.route);
+              b = true;
+              break;
             }
+          }
+          if (b) {
+            Navigator.of(context).pushReplacement(HomeScreen.route);
+          } else {
+            Navigator.of(context)
+                .pushReplacementNamed(CompleteRegistration.routeName);
           }
         },
         child: Stack(

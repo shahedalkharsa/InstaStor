@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:instaStore/views/home/drawer/contact-us.dart';
 import 'about-us.dart';
 import 'QA.dart';
-import '../../../config/palette.dart';
+import '../../../Controllers/palette.dart';
 import 'package:lit_firebase_auth/lit_firebase_auth.dart';
 import '../../auth/auth.dart';
 

@@ -121,7 +121,7 @@ class _CompleteRegistration extends State<CompleteRegistration> {
                             keyboardType: TextInputType.number,
                             onChanged: (value) => _phone = value,
                             validator: (String value) {
-                              RegExp reg = new RegExp("^[05]");
+                              RegExp reg = new RegExp("^(05)");
                               if (value.isEmpty) {
                                 return 'Phone is Required';
                               } else if (value.length != 10) {

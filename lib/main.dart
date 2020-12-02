@@ -1,10 +1,10 @@
 import './views/splash.dart';
 import 'package:lit_firebase_auth/lit_firebase_auth.dart';
-import './config/palette.dart';
+import 'Controllers/palette.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:google_fonts/google_fonts.dart';
-import './routes.dart';
+import 'Controllers/routes.dart';
 import 'package:animated_splash_screen/animated_splash_screen.dart';
 
 void main() async {

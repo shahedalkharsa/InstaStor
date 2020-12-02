@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../../models/WishList.dart';
-import '../../../config/palette.dart';
+import '../../../Controllers/palette.dart';
 import '../../../models/Product.dart';
 import 'package:firebase_database/firebase_database.dart';
 import '../../details/details_screen.dart';

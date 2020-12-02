@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../config/palette.dart';
+import '../../Controllers/palette.dart';
 
 InputDecoration registerInputDecoration({String hintText}) {
   return InputDecoration(

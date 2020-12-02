@@ -1,7 +1,7 @@
 import 'package:flutter/animation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import '../config/palette.dart';
+import '../Controllers/palette.dart';
 import 'dart:math';
 import 'dart:ui';
 

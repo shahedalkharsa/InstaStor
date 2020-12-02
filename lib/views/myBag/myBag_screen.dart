@@ -11,7 +11,7 @@ import './../../models/Product.dart';
 import 'package:http/http.dart' as http;
 import 'package:flutter_svg/flutter_svg.dart';
 import '../../components/default_button.dart';
-import '../../constants.dart';
+import '../../Controllers/constants.dart';
 import './components/myBag_cost.dart';
 
 class MyBagScreen extends StatefulWidget {

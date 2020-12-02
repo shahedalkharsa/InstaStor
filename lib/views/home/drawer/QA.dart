@@ -34,13 +34,9 @@ class QAScreen extends StatelessWidget {
                   answer:
                       "•	Log in to your account \n•	Click on My Profile at the top left of the page \n•	Click on Edit \n•	Edit the info you would like to modify \n•	Press the Save button. "),
               QuestionList(
-                  question: "How do I reset my password?",
-                  answer:
-                      "•	Log in to your account \n•	Click on My Profile at the top left of the page \n•	Click on Account Information \n•	Click on the Change Password check box \n•	Fill in the required fields \n•	Press the Save button."),
-              QuestionList(
                   question: "How can I pay for my order?",
                   answer:
-                      "You can pay for your order using credit card, or in cash on delivery."),
+                      "You can pay for your order only using cash on delivery."),
               QuestionList(
                   question: "Which Currency is accepted?",
                   answer: "We accept Saudi Riyal only."),

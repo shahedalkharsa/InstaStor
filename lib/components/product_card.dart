@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import '../models/Product.dart';
 import '../views/details/details_screen.dart';
-import '../constants.dart';
+import '../Controllers/constants.dart';
 import '../components/heart.dart';
 
 class ProductCard extends StatefulWidget {

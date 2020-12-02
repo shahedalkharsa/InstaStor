@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../config/palette.dart';
+import '../Controllers/palette.dart';
 
 class DefaultButton extends StatelessWidget {
   const DefaultButton({

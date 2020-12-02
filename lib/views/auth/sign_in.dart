@@ -3,7 +3,7 @@ import '../../Views/auth/decoration_functions.dart';
 import 'package:lit_firebase_auth/lit_firebase_auth.dart';
 import 'logo.dart';
 import './sign_in_up_bar.dart';
-import '../../config/palette.dart';
+import '../../Controllers/palette.dart';
 
 class SignIn extends StatelessWidget {
   const SignIn({
